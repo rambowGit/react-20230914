@@ -3,6 +3,7 @@ import restaurants from '../../constants/mock';
 import { Tab } from '../../components/Tab/component';
 import { Restaurant } from '../../components/Restaurant/component';
 
+
 export function MainPage() {
   const [restaurant, setRestaurant] = useState(restaurants.at(0));
 
@@ -19,7 +20,7 @@ export function MainPage() {
           onClickFn={() => setRestaurant(rst)}
         />
       ))}
-      <Restaurant restaurantObj={restaurant} id={123} />
+      <Restaurant restaurantObj={restaurant} />
     </div>
   );
 }
