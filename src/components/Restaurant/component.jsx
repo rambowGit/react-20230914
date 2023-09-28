@@ -5,7 +5,7 @@ export function Restaurant({ restaurant }) {
   return (
     <div>
       <h2>{restaurant.name}</h2>
-      <Menu menuList={restaurant.menu} />
+      <Menu menu={restaurant.menu} />
       <Reviews reviews={restaurant.reviews} />
     </div>
 
