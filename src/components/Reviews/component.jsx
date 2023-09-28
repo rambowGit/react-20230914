@@ -1,9 +1,9 @@
-export function ReviewList({ reviewList }) {
-  if (!reviewList?.length === 0) {
+export function Reviews({ reviews }) {
+  if (reviews?.length === 0) {
     return null;
   }
 
-  const listItems = reviewList.map((review) => (
+  const listItems = reviews.map((review) => (
     <li key={review.id}>
       <div>{review.text}</div>
     </li>

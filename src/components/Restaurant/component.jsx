@@ -1,12 +1,12 @@
-import { MenuList } from '../MenuList/component';
-import { ReviewList } from '../Reviews/component';
+import { Menu } from '../Menu/component';
+import { Reviews } from '../Reviews/component';
 
-export function Restaurant({ restaurantObj }) {
+export function Restaurant({ restaurant }) {
   return (
     <div>
-      <h1>{restaurantObj.name}</h1>
-      <MenuList menuList={restaurantObj.menu} />
-      <ReviewList reviewList={restaurantObj.reviews} />
+      <h2>{restaurant.name}</h2>
+      <Menu menuList={restaurant.menu} />
+      <Reviews reviews={restaurant.reviews} />
     </div>
 
   );

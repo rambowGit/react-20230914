@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Button } from '../../Button/component';
+import { Button } from '../Button/component';
 
-export function Menu({ name }) {
+export function Dish({ name }) {
   const [amount, setAmount] = useState(0);
 
   if (!name) {

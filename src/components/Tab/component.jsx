@@ -1,16 +1,7 @@
-import restaurants from '../../constants/mock';
-import { Button } from '../Button/component';
-
-export function Tab({ title, onClickFn }) {
-  if (!restaurants?.length) {
-    return null;
-  }
-
+export function Tab({ title, onClick }) {
   return (
-    <Button
-      title={title}
-      onClick={onClickFn}
-      disabled={null}
-    />
+    <button type="button" onClick={onClick}>
+      {title}
+    </button>
   );
 }
