@@ -14,7 +14,7 @@ export function MainPage() {
     <div>
       <RestaurantTabs
         restaurants={restaurants}
-        onChangeTab={(index) => setActivTabIndex(index)}
+        onChangeTab={setActivTabIndex}
       />
       <Restaurant restaurant={restaurants[restaurantActivTabIndex]} />
     </div>
