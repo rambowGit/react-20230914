@@ -3,15 +3,16 @@ export function Reviews({ reviews }) {
     return null;
   }
 
-  const listItems = reviews.map((review) => (
-    <li key={review.id}>
-      <div>{review.text}</div>
-    </li>
-  ));
-
   return (
     <ul>
-      {listItems}
+      {
+        reviews.map((review) => (
+          <li key={review.id}>
+            <div>{review.text}</div>
+          </li>
+        ))
+      }
+
     </ul>
   );
 }
