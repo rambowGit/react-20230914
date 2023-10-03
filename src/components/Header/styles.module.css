@@ -1,0 +1,15 @@
+.top-container {
+  background-color: var(--groung-body);
+  padding: 1rem;
+  text-align: center;
+  color: var(--ground-header)
+}
+
+/* Style the header */
+.header {
+  padding: 1rem;
+  background-color: var(--ground-header);
+  color: #f1f1f1;
+  text-align: center;
+}
+
