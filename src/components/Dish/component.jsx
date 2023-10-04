@@ -18,6 +18,7 @@ export function Dish({ name }) {
           <Button
             title="-"
             onClick={() => setAmount(amount - 1)}
+            className={styles['product-button']}
             disabled={amount === 0}
           />
           <div className={styles['product-count']}>
@@ -27,6 +28,7 @@ export function Dish({ name }) {
           <Button
             title="+"
             onClick={() => setAmount(amount + 1)}
+            className={styles['product-button']}
             disabled={amount === 5}
           />
         </div>

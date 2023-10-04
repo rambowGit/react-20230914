@@ -20,9 +20,16 @@ https://www.colorhunt.co/palette/fff4e0ffbf9bb460604d4d4d
   --groung-body: #FFF4E0;
   --ground-header: #4D4D4D;
   --ground-button: #B46060;
+  --ground-button-100: #f0ad4e;
   --button-hover: #FFBF9B;
   --card-border: #FFBF9B;
 
+}
+
+.dark {
+  background-color: #1d1d1d;
+  --ground-button: #351414;
+  --ground-button-100: #665c3c;
 }
 
 * {
