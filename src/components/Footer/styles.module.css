@@ -1,0 +1,12 @@
+.content-container {
+  padding: .5rem;
+  text-align: center;
+}
+
+.footer {
+  padding: .6rem 1rem;
+  background-color: var(--ground-header);;
+  color: #f1f1f1;
+  text-align: center;
+}
+
