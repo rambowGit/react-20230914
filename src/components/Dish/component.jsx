@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button } from '../Button/component';
+import styles from './styles.module.css';
 
 export function Dish({ name }) {
   const [amount, setAmount] = useState(0);
@@ -12,17 +13,25 @@ export function Dish({ name }) {
     <div>
       {name}
       -
-      <Button
-        title="-"
-        onClick={() => setAmount(amount - 1)}
-        disabled={amount === 0}
-      />
-      {amount}
-      <Button
-        title="+"
-        onClick={() => setAmount(amount + 1)}
-        disabled={amount === 5}
-      />
+      <div className={styles.product_counter}>
+        <div className={styles.product_buttonGroup}>
+          <Button
+            title="-"
+            onClick={() => setAmount(amount - 1)}
+            disabled={amount === 0}
+          />
+          <div className={styles['product-count']}>
+            {amount}
+          </div>
+
+          <Button
+            title="+"
+            onClick={() => setAmount(amount + 1)}
+            disabled={amount === 5}
+          />
+        </div>
+      </div>
+
     </div>
   );
 }

@@ -1,0 +1,36 @@
+/* 
+Color hunt
+https://www.colorhunt.co/palette/fff4e0ffbf9bb460604d4d4d
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+:root {
+  --black: #1d1d1d;
+  --white: #fff;
+  --orange: #e4661e;
+  --orange-light: #f0894e;
+  --pink: #fff0db;
+  --yellow: #f0ad4e;
+  --yellow-light: #ffd25d;
+  --grey: #e5e5e5;
+  --green: #49ab39;
+  --input-border: #c4c4c4;
+  
+  --surface-100: #FFBF9B;
+  --groung-body: #FFF4E0;
+  --ground-header: #4D4D4D;
+  --ground-button: #B46060;
+  --button-hover: #FFBF9B;
+  --card-border: #FFBF9B;
+
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--groung-body);
+}
+  
+

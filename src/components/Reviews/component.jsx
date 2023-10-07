@@ -1,10 +1,12 @@
+import styles from './styles.module.css';
+
 export function Reviews({ reviews }) {
   if (reviews?.length === 0) {
     return null;
   }
 
   return (
-    <ul>
+    <ul className={styles['review-container']}>
       {
         reviews.map((review) => (
           <li key={review.id}>

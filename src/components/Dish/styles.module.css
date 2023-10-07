@@ -1,0 +1,21 @@
+.product_counter {
+  padding: 5px 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.product-count {
+  color: #898989;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.product_buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+}

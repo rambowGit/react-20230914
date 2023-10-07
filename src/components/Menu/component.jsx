@@ -1,4 +1,5 @@
 import { Dish } from '../Dish/component';
+import styles from './styles.module.css';
 
 export function Menu({ menu }) {
   if (menu?.length === 0) {
@@ -9,7 +10,10 @@ export function Menu({ menu }) {
     <ul>
       {menu.map((dish) => (
         <li key={dish.id}>
-          <Dish name={dish.name} />
+          <div className={styles.product_content}>
+            <Dish name={dish.name} />
+          </div>
+
         </li>
       ))}
     </ul>
