@@ -14,7 +14,7 @@
 }
 
 .theme-button {
-  background-color: var(--ground-button-100); 
+  /* background-color: var(--ground-button-100);  */
   border: none;
   color: var(--white);
   padding: .2rem .5rem;
@@ -23,4 +23,5 @@
   display: inline-block;
   font-size: 1rem;
   border-radius: .2rem;
+  cursor: pointer;
 }

@@ -2,3 +2,12 @@
   background-color: var(--grey);
   border: 1px solid var(--grey);
 }
+
+
+.theme_default {
+  background-color: #f0ad4e; 
+}
+
+.theme_dark {  
+  background-color: #665c3c;   
+}

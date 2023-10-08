@@ -5,7 +5,7 @@ import { ThemeContext } from '../../contexts/Theme';
 import { Button } from '../Button/component';
 
 export function Header({ title, className, children }) {
-  const { isDarkTheme, changeTheme } = useContext(ThemeContext);
+  const { toggleTheme } = useContext(ThemeContext);
 
   return (
     <header className={className}>
@@ -16,7 +16,7 @@ export function Header({ title, className, children }) {
         <p>ANYfOOD</p>
         <Button
           title="Theme"
-          onClick={() => changeTheme(!isDarkTheme)}
+          onClick={() => toggleTheme()}
           className={styles['theme-button']}
         />
 

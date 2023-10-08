@@ -22,7 +22,7 @@
 
 .product-button {
   color: var(--white);
-  background-color: var(--ground-button-100);
+  /* background-color: var(--ground-button-100); */
   border: 1px solid var(--ground-button-100);
   border-radius: 2px;
   width: 36px;
@@ -37,4 +37,12 @@
   outline: none;
   box-shadow: none;
   cursor: pointer;
+}
+
+.theme_default {
+  background-color: #f0ad4e; 
+}
+
+.theme_dark {  
+  background-color: #665c3c;   
 }

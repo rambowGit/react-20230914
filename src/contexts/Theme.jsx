@@ -3,19 +3,15 @@ import React, { useState } from 'react';
 export const ThemeContext = React.createContext();
 
 export function ThemeProvider({ children }) {
-  const [isDarkTheme, changeTheme] = useState(false);
-  const { body } = document;
+  // theme: 'default' || 'dark'
+  const [theme, setTheme] = useState('default');
 
-  if (isDarkTheme) {
-    console.log('isDarkTheme ->', isDarkTheme);
-    body.classList.add('dark');
-  } else {
-    console.log('isDarkTheme ->', isDarkTheme);
-    body.classList.remove('dark');
-  }
+  const toggleTheme = () => {
+    setTheme(theme === 'default' ? 'dark' : 'default');
+  };
 
   return (
-    <ThemeContext.Provider value={{ isDarkTheme, changeTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
