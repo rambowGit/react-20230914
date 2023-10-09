@@ -4,16 +4,15 @@ import styles from './styles.module.css';
 import { ThemeContext } from '../../contexts/Theme';
 
 export function Button({
-  title, onClick, className, disabled,
+  title, onClick, className, disabled, type,
 }) {
   const { theme } = useContext(ThemeContext);
 
   return (
     <button
-      type="button"
+      type={type || 'button'}
       onClick={onClick}
       className={
-      // TODO: перестало работать. Почему - непонятно.
         classNames(className, {
           [styles.theme_default]: theme === 'default',
           [styles.theme_dark]: theme === 'dark',
@@ -21,7 +20,14 @@ export function Button({
       }
       disabled={disabled}
     >
-      {title}
+      <div className={
+        classNames(className, {
+          [styles.disabled]: disabled === true,
+        })
+      }
+      >
+        {title}
+      </div>
 
     </button>
   );

@@ -2,10 +2,7 @@ import { useState } from 'react';
 import restaurants from '../../constants/mock';
 import { RestaurantTabs } from '../../components/RestaurantTabs/component';
 import { Restaurant } from '../../components/Restaurant/component';
-import { Header } from '../../components/Header/component';
-import { Footer } from '../../components/Footer/component';
-import { ThemeProvider } from '../../contexts/Theme';
-import styles from './styles.module.css';
+import { Layout } from '../../components/Layout/component';
 
 export function MainPage() {
   const [restaurantActivTabIndex, setActivTabIndex] = useState(0);
@@ -15,26 +12,12 @@ export function MainPage() {
   }
 
   return (
-    <ThemeProvider>
-      <div className={styles.root}>
-        <Header
-          title="Restaurants"
-          className={styles.header}
-        >
-          <RestaurantTabs
-            restaurants={restaurants}
-            onSelectTab={setActivTabIndex}
-          />
-        </Header>
-        <div className={styles['content-container']}>
-          <Restaurant restaurant={restaurants[restaurantActivTabIndex]} />
-        </div>
-        <Footer
-          text="Simple footer"
-          className={styles.footer}
-        />
-      </div>
-    </ThemeProvider>
-
+    <Layout>
+      <RestaurantTabs
+        restaurants={restaurants}
+        onSelectTab={setActivTabIndex}
+      />
+      <Restaurant restaurant={restaurants[restaurantActivTabIndex]} />
+    </Layout>
   );
 }

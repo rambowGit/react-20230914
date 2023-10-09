@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { useReducer } from 'react';
 import styles from './styles.module.css';
+import { Button } from '../Button/component';
 
 const initialState = {
   name: 'Ivan',
@@ -117,9 +118,11 @@ export function ReviewForm() {
             </select>
           </div>
         </div>
-        <button type="submit" className={['styles.review-form__submit']}>
-          PUBLISH REVIEW
-        </button>
+        <Button
+          title="PUBLISH REVIEW"
+          className={styles['review-form__submit']}
+          type="submit"
+        />
       </form>
     </div>
 

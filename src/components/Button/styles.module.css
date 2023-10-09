@@ -1,6 +1,7 @@
 .disabled {
   background-color: var(--grey);
-  border: 1px solid var(--grey);
+  border: 5px solid var(--grey);
+  color: var(--grey);
 }
 
 

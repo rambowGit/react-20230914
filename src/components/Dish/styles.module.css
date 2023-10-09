@@ -22,7 +22,6 @@
 
 .product-button {
   color: var(--white);
-  /* background-color: var(--ground-button-100); */
   border: 1px solid var(--ground-button-100);
   border-radius: 2px;
   width: 36px;
