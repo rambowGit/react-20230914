@@ -6,8 +6,10 @@ export function Reviews({ reviews }) {
   }
 
   return (
-    <ul className={styles['review-container']}>
-      {
+    <div>
+      <h3>Reviews</h3>
+      <ul className={styles['review-container']}>
+        {
         reviews.map((review) => (
           <li key={review.id}>
             <div>{review.text}</div>
@@ -15,6 +17,8 @@ export function Reviews({ reviews }) {
         ))
       }
 
-    </ul>
+      </ul>
+    </div>
+
   );
 }
