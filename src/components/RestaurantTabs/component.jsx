@@ -1,26 +1,24 @@
-import { useState } from 'react';
-import { Tab } from '../Tab/component';
+import { RestaurantTabContainer } from "../RestarauntTab/container";
 import styles from './styles.module.css';
 
-export function RestaurantTabs({ restaurants, onSelectTab }) {
-  const [tabIndex, setTabIndex] = useState(0);
+export function RestaurantTabs({ 
+  activeRestaurantId,
+  onTabSelect,
+  restaurantIds,
+ }) {
 
   return (
     <div className={styles['tabs-container']}>
-      {restaurants.map((restaurant, index) => (
-        <Tab
-          key={restaurant.id}
-          title={restaurant.name}
-          onClick={
-            (event) => {
-              setTabIndex(event);
-              return onSelectTab(index);
-            }
-          }
-          isActive={tabIndex === index}
-          // передаем индекс текущего ресторана, чтобы TAB "знал", к какому ресторану он относится
-          index={index}
-        />
+     {restaurantIds.map((id) => (
+        <RestaurantTabContainer
+          key={id}
+          restaurantId={id}
+          isActive={id === activeRestaurantId}
+          onClick={() => onTabSelect(id)}
+          className={styles.tab}
+        >
+          {name}
+        </RestaurantTabContainer>
       ))}
     </div>
 

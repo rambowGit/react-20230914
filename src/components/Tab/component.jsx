@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import styles from './styles.module.css';
 
 export function Tab({
-  title, onClick, isActive, index,
+  children, onClick, isActive, index,
 }) {
   return (
     <button
@@ -21,7 +21,7 @@ export function Tab({
         },
       )}
     >
-      {title}
+      {children}
     </button>
   );
 }

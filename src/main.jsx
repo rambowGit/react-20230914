@@ -1,14 +1,12 @@
 import ReactDOM from 'react-dom/client';
-import { ThemeProvider } from './contexts/Theme';
-import { MainPage } from './pages/Main/component';
+import React from 'react';
+import { App } from './App';
+
 import 'normalize.css';
 import './index.css';
 
-const rootElement = document.getElementById('root');
-const root = ReactDOM.createRoot(rootElement);
-
-root.render(
-  <ThemeProvider>
-    <MainPage />
-  </ThemeProvider>,
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
 );
