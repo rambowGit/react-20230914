@@ -2,16 +2,16 @@ import { useState } from 'react';
 import { Button } from '../Button/component';
 import styles from './styles.module.css';
 
-export function Dish({ name }) {
+export function Dish({ dish }) {
   const [amount, setAmount] = useState(0);
 
-  if (!name) {
+  if (!dish) {
     return null;
   }
-
+  
   return (
     <div>
-      {name}
+      {dish.name}
       -
       <div className={styles.product_counter}>
         <div className={styles.product_buttonGroup}>
