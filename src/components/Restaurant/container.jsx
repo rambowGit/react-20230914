@@ -8,6 +8,6 @@ export function RestaurantContainer({ restaurantId }) {
   if (!restaurant) {
     return null;
   }
-
+  
   return <Restaurant restaurant={restaurant} />;
 }

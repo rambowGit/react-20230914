@@ -6,8 +6,6 @@ export function Reviews({ reviews }) {
     return null;
   }
   
-  console.log('reviews ', reviews);
-
   return (
     <div>
       <h3>Reviews</h3>
