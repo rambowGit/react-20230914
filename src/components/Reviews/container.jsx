@@ -10,39 +10,30 @@ import { useMakeRequest } from "../../hooks/use-make-request";
 import { selectRequestStatus } from "../../redux/ui/request/selectors";
 
 
-
 export const ReviewsContainer = ({ restaurantId }) => {
-  const request = useRef();
-  const restaurantReviews = useSelector((state) => 
+  const restaurantReviews = useSelector((state) =>
     selectRestaurantReviewsById(state, restaurantId)
   );
-  const reviewsLoadingStatus = useSelector((state) =>
-    selectRequestStatus(state, request.current?.requestId)
+  const reviewsLoadingStatus = useRequest(
+    getReviewsByRestaurantIfNotExist,
+    restaurantId
   );
-  
-  const dispatch = useDispatch();
-  
-  useEffect(() => {
-    request.current = dispatch(getReviewsByRestaurantIfNotExist(restaurantId));
-    
-    return () => {
-      request.current?.abort();
-      request.current = null;
-      
-    };
-  }, [restaurantId]);
-  
-  useEffect(() => {
-    dispatch(getUsersIfNotExist());
-    return () => {};
-  }, []);
-  
-  if (reviewsLoadingStatus === LOADING_STATUS.loading) {
-    return <div>Loading...</div>
+  const userLoadingStatus = useRequest(getUsersIfNotExist, restaurantId);
+
+
+
+  // const [creatingReviewStatus, createNewReview] = useMakeRequest();
+
+  // useEffect(() => {
+  //   createNewReview();
+  // }, [restaurantId, createNewReview]);
+
+  if (
+    reviewsLoadingStatus === LOADING_STATUS.loading ||
+    userLoadingStatus === LOADING_STATUS.loading
+  ) {
+    return <div>Loading...</div>;
   }
-  
-  return <Reviews reviews={restaurantReviews} />
-  
 
-}
-
+  return <Reviews reviews={restaurantReviews} />;
+};
