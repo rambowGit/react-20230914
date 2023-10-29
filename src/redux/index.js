@@ -3,6 +3,8 @@ import restaurant from "./entities/restaurant";
 import dish from "./entities/dish";
 import review from "./entities/review";
 import user from "./entities/user";
+import request from "./ui/request";
+
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +12,6 @@ export const store = configureStore({
     dish,
     review,
     user,
+    request,
   },
 });
